@@ -1,0 +1,45 @@
+<div class="ole">
+    
+    <section>
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+            <ul class="nav nav-pills flex-column mb-auto navbar-expand-sm bg-dark navbar-dark">
+              <li>
+                <a [routerLink]="['/dashboard']" class="nav-link text-secondary navbar" aria-current="page">
+                    <i class="material-icons">home</i>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/favorite']" class="nav-link text-info navbar">
+                    <i class="material-icons">favorite_border</i>
+                  Favorite 
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" text-secondary navbar" (click)="logoutUser()">
+                    <i class="material-icons">power_settings_new</i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+    <div>
+    <h1 class="deepshadow text-white text"><b>Favorite</b></h1>
+       <br>
+       <div class="container">
+       <div class="img-row">
+       <div *ngFor="let i of art"> 
+        <a [routerLink]="['/about', i.name]" ><img src={{i.foto}} alt=""/></a>
+        <div id="rtyu" value=paint  class="img-description">{{i.name}}<br>{{i.material}}<br>{{i.size}}
+    <div class="text-right"><b>{{ i.price | currency:'EUR' }}</b><br>
+      <div>
+        <span (click) = "onDelete(i.name)"class="reed">&hearts;</span>
+      </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

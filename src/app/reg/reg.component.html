@@ -1,0 +1,10 @@
+<div class="ole">
+<h1 class="text-white"><b>Registration form</b></h1>
+<form (submit)="userRegisterClick()">
+    <input type="text" [(ngModel)]="name"  name="name" required placeholder="Enter name" class="text-dark bg-secondary form-control"><br>
+    <input type="email" [(ngModel)]="email" name="email" aria-describedby="emailHelp" required placeholder="Enter email" class="text-dark bg-secondary form-control"><br>
+    <input type="text" [(ngModel)]="login" name="login" required placeholder="Enter login" class="text-dark bg-secondary form-control"><br>
+    <input type="password" [(ngModel)]="password" name="password" required placeholder="Enter password" class="text-dark bg-secondary form-control"><br>
+    <button class="btn btn-secondary" type="submit">Sign-up</button>
+</form>
+</div>

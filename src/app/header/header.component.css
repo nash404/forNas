@@ -1,0 +1,29 @@
+h1{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+a{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.yyy{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 16pt;
+}
+.tab:hover { 
+    /* элемент тени если наведен курсор */ 
+   -webkit-box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.966), 0 1px 0px rgba(255, 255, 255, 0.479); 
+    -moz-box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.616), 0 1px 0px rgba(255, 255, 255, 0.616); 
+    box-shadow: 0 15px 10px -10px rgba(255, 255, 255, 0.425), 0 1px 0px rgba(255, 255, 255, 0.274); 
+    /* элемент тени если наведен курсор конец */ 
+    }
+    #head{
+        width: 1540px;
+        height: 70px;
+        position: fixed;
+        background: #fff;
+        z-index: 1000;
+    }
+    /* Что бы наш следующий блок не заезжал под шапку 
+    как только страница загрузилась добавим отступ. */
+    #content {
+        margin-top: 60px;
+    }

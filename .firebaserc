@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "artplakhotnyk": {
+      "hosting": {
+        "front-end-app": [
+          "artplakhotnyk"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "artplakhotnyk"
+  }
+}

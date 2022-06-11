@@ -1,0 +1,336 @@
+.img-row {
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 576px) {
+    .img-row {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      /* количество колонок */
+      -webkit-column-gap: 1rem;
+      -moz-column-gap: 1rem;
+      column-gap: 1rem;
+      /* расстояние между колонками */
+      orphans: 1;
+      /* задаём минимальное число строк текста, которое должно остаться на предыдущей странице при печати */
+      widows: 1;
+      /* задаём минимальное число строк текста, которое должно располагаться на следующей странице при печати */
+    }
+  }
+
+  .img-row > div {
+    /* необходимо установить, иначе column-count работать не будет */
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    /* отступ под изображением */
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .img-row img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .img-description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .ii{
+    position: absolute;
+    right: 90%;
+  }
+  .ole{
+    margin-top: 100px;
+  }
+  .brd {
+    border: 4px double black; /* Параметры границы */
+    background:gray; /* Цвет фона */
+    opacity: 0.7;
+    padding: 7px; /* Поля вокруг текста */
+   }
+   h3{
+       font-weight: bold;
+       color: #000;
+       font-size: 14pt;
+   }
+   p {
+    color: #fff;
+    font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  p span {
+    display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+  p span::before,
+  p span::after {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    transform-origin: left top;
+    transition: all ease-out 0.3s;
+    content: attr(data-text);
+  }
+  p span::before {
+    z-index: 1;
+    color: rgba(0,0,0,0.2);
+    transform: scale(1.1, 1) skew(0deg, 20deg);
+  }
+  p span::after {
+    z-index: 2;
+    color: #000000;
+    text-shadow: -1px 0 1px #000000, 1px 0 1px rgba(0,0,0,0.8);
+    transform: rotateY(-40deg);
+  }
+  p span:hover::before {
+    transform: scale(1.1, 1) skew(0deg, 5deg);
+  }
+  p span:hover::after {
+    transform: rotateY(-10deg);
+  }
+  p span + span {
+    margin-left: 0.3em;
+  }
+  @media (min-width: 20em) {
+    p {
+      font-size: 2em;
+    }
+    p span::before,
+    p span::after {
+      display: block;
+    }
+  }
+  @media (min-width: 30em) {
+    p {
+      font-size: 3em;
+    }
+  }
+  @media (min-width: 40em) {
+    p {
+      font-size: 5em;
+    }
+  }
+  @media (min-width: 60em) {
+    p {
+      font-size: 8em;
+    }
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #684da3;
+  }
+   /* основа кнопки вверх */
+.scroll_top {
+    position: fixed; /* фиксированное положение */
+    bottom: -50px; /* расстояние от нижнего края */
+    right: 20px; /* расстояние от правого края */
+    width: 50px; /* ширина */
+    height: 50px; /* высота */
+    border: none; /* без рамки */
+    border-radius: 50%; /* фигура круга */
+    background: #ffffff;/* цвет фона */
+    z-index: 100; /* поверх остальных элементов */
+    outline: none; /* без внешней обводки */
+    cursor: pointer;/* курсор рука */
+    transition: 0.4s; /* плавное движение */
+}
+
+
+/* стрелочка внутри кнопки вверх */
+.scroll_top:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid rgb(0, 0, 0); /* верхняя рамка */
+      border-left: 2px solid rgb(0, 0, 0); /* левая рамка */
+    transform: rotate(45deg); /* поворот */
+    position: absolute; /* положение относительно круга */
+    top: 7px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; /* выравнивание по центру */
+}
+.scroll_top.active {
+    bottom: 20px;
+}
+
+.mm{
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.border {
+  position: relative;
+  display: inline-block;
+}
+.border img {
+  display: block;
+  width: 350px;
+}
+.border:before{
+  content: "";
+  width: 100%;
+  height: 99%;
+  border: 6px solid #FBF6F2;
+  position: absolute;
+  /*top: 20px;
+  left: 40px;*/
+  z-index: 2;
+}
+.border:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 6px solid #FBF6F2;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 2;
+}
+.border:after {
+  top: -10px;
+  left: 10px;
+  z-index: -1;
+}
+
+
+/*.like {
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.like__input {
+  display: none;
+}
+
+.like__heart:before {
+  content: '\f08a';
+  font-family: fontAwesome;
+  color: gray;
+}
+
+:checked+.like__heart:before {
+  content: '\f004';
+  color: red;
+}
+.likes_true:before{
+  
+  color: red;
+}*/
+.zvheart {               
+  font-family: Arial, sans-serif;
+  /*border-color: gray;
+  color: #c70000;*/
+  text-align: center;
+  font-size: 50px;
+  
+  cursor: pointer;
+  /*text-shadow: 0 0 0 #AB0000,
+     -1px 1px 0 #A20000,
+     -2px 2px 0 #980000,
+     -3px 3px 0 #8F0000,
+     -4px 4px 0 #860000,
+     -5px 5px 0 #7D0000,
+     -6px 6px 0 #740000,
+     -7px 7px 0 #6B0000,
+     -8px 8px 0 #610000,
+     -9px 9px 0 #580000,
+     -10px 10px 0 #4F0000,*/
+     
+  }
+  .like__heart{
+    font-family: Arial, sans-serif;
+  /*border-color: gray;*/
+  color: #c70000;
+  text-align: center;
+  font-size: 50px;
+  
+  cursor: pointer;
+  }
+  .like__he{
+    font-family: Arial, sans-serif;
+  /*border-color: gray;*/
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+
+  }
+  .like__he:active {
+    font-family: Arial, sans-serif;
+  /*border-color: gray;*/
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+    color: red;
+  }
+  span.active{
+    color: #c70000;
+  }
+
+  .glow {
+    font-size: 28pt;
+    color: #bac700;
+  }
+  .noglow{
+    font-size: 28pt;
+    color: #c70000;
+    letter-spacing: -4px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+  }
+  .area {
+    
+    font-size: 3.5em;
+    color: rgb(255, 238, 1);
+    letter-spacing: -5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: blur .75s ease-out infinite;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+  }
+  
+  @keyframes blur {
+    from {
+      text-shadow:0px 0px 10px #fff,
+        0px 0px 10px #fff, 
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 50px #fff,
+        0px 0px 50px #fff,
+        0px 0px 50px #7B96B8,
+        0px 0px 150px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px -10px 100px #7B96B8,
+        0px -10px 100px #7B96B8;
+    }
+  }

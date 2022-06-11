@@ -1,0 +1,8 @@
+<div class="ole">
+    <h1 class="text-white"><b>Authorization form</b></h1>
+    <form (submit)="userLoginClick()">
+        <input type="text" [(ngModel)]="login" name="login" required placeholder="Enter login" class="text-dark bg-secondary form-control"><br>
+        <input type="password" [(ngModel)]="password" name="password" required placeholder="Enter password" class="text-dark bg-secondary form-control"><br>
+        <button class="btn btn-secondary" type="submit">Login</button>
+    </form>
+    </div>

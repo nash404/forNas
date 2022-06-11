@@ -1,0 +1,35 @@
+<div class="container ole">
+<div class="jumbotron bg-dark text-white">
+<label style="margin-right: 50px;"><input type="checkbox"  [(ngModel)]="filter.People" (ngModelChange)="filterChange()" /> People</label>
+<label style="margin-right: 50px;"><input type="checkbox" [(ngModel)]="filter.Flowers" (ngModelChange)="filterChange()" /> Flowers </label>
+<label style="margin-right: 50px;"><input type="checkbox" [(ngModel)]="filter.Still_life" (ngModelChange)="filterChange()" /> Still life</label>
+<label style="margin-right: 50px;"><input type="checkbox" [(ngModel)]="filter.Animals" (ngModelChange)="filterChange()" /> Animals</label>
+<label style="margin-right: 50px;"><input type="checkbox" [(ngModel)]="filter.Abstract" (ngModelChange)="filterChange()" /> Abstract</label>
+
+<label ><input type="checkbox" [(ngModel)]="filter.Landscapes" (ngModelChange)="filterChange()" /> Landscapes, sea and sky</label>
+</div>
+<br>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<div class="img-row">
+<div *ngFor="let paint of filteredProducts"> 
+  <a [routerLink]="['/about', paint.name]" ><img src={{paint.foto}} alt=""/></a>
+      <div id="rtyu" value=paint class="img-description" >
+        <div [ngClass]="{area:paint.status==='NEW',
+                        noglow:paint.status==='SOLD'}">{{paint.status}}</div>
+        <br>{{paint.name}}<br>{{paint.material}}<br>{{paint.size}}
+  <div class="text-right"><b>{{ paint.price | currency:'EUR' }}</b><br>
+    <div>
+    <span (click)="userLikeClick(paint.name)" class="like__he"  [ngClass]="{like__heart:paint.isChecked==true}">&hearts;</span>
+    </div>
+    <!--label class="like" [ngClass]="{like__heart:isVerdana}">
+      <input (click)="userLikeClick(paint.name)" id="likee" type="checkbox" class="like__input">
+      <span ></span>
+    </label--></div>
+
+</div>
+
+</div>
+<button class="scroll_top"></button>
+</div>
+<app-footer></app-footer>
+  

@@ -1,0 +1,32 @@
+<div class="conteiner ole">
+        <section>
+        <img class="img-row" src={{paint$.foto}} alt="" />
+    </section>
+    <section class="text-white">
+        <h1 ><strong>{{ paint$.name }}</strong></h1>
+        <ul>
+            <li><h3>{{ paint$.material }} paintings</h3></li>
+            <li><h3>One of a kind artwork</h3></li>
+            <li><h3>Size: {{ paint$.size }}</h3></li>
+            <li><h3>Signed certificate of authenticity</h3></li>
+          </ul>
+        <p>Original oil painting.<br>
+            Painting is signed on the front.<br>
+            Please note colors may slightly vary due to different computer monitors.<br>
+            Varnished to protect against UV light and dust.<br>
+            Shipping via international airmail using Ukrainian post service.
+            Delivery time depends on your location and how long the parcel is at the customs.
+            Tracking number is added, so you can see the movement of your order.
+            <br><br>
+            A certificate of authenticity is included.
+            I hope this painting will give your family hours of joy and a lot of positive emotions.
+            Contact me , if you have any questions.<br>
+            I am gladly answer.</p>
+        <h3>{{ paint$.price | currency:'EUR' }}</h3>
+        <button id="cartt" class="button8" type="button" (click)="addToCart()">Buy</button>
+    </section>
+      </div>
+
+<footer>
+<app-footer></app-footer>
+</footer>

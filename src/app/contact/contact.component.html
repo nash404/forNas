@@ -1,0 +1,24 @@
+<div class="container ole">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form ngNoForm action="https://formspree.io/f/xoqrrppd" method="POST" name="myForm">
+                <div>
+                <label class="text-secondary" for="Email">Email</label>
+                <input type="email" class="form-control bg-secondary text-dark" required name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
+            </div>
+                <div class="form-group">
+                <label class="text-secondary" for="fullname">Full Name</label>
+                <input type="text" class="form-control bg-secondary text-dark" required name="Fullname" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                <label class="text-secondary" for="message">Message</label>
+                <textarea class="form-control bg-secondary text-dark" required placeholder="Enter message" name="Message"></textarea>
+                </div>
+                
+                <button type="submit reset" class="btn btn-primary bg-dark">Submit</button>
+            </form>
+    </div>
+</div>
+</div>
+<app-footer></app-footer>

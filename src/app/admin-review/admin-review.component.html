@@ -1,0 +1,8 @@
+<div class="ole">
+    <h1 class="text-white"><b>Admin form Review</b></h1>
+    <form (submit)="rewiewAddClick()">
+        <input type="text" [(ngModel)]="name"  name="name" required placeholder="Enter name" class="text-dark bg-secondary form-control"><br>
+        <textarea [(ngModel)]="text"  name="text" required placeholder="Enter text" class="text-dark bg-secondary form-control"></textarea><br>
+        <button class="btn btn-secondary" type="submit">Submit</button>
+    </form>
+    </div>

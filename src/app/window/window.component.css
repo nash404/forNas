@@ -1,0 +1,33 @@
+.ole{
+    margin-top: 100px;
+  }
+  .img-row {
+    max-width: 400px;
+  }
+  section {
+    float: left;
+    width: 50%;
+  }
+  footer{
+    clear: both;
+    
+  }
+  .hh{
+    background-color: rgb(172, 154, 154);
+  }
+  .button8 {
+    display: inline-block;
+    color: rgb(212, 204, 204);
+    background-color: rgb(121, 123, 126);
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+  } 
+  .button8:hover { background: rgba(255,255,255,.2); }
+  .button8:active { background: white; }
+  

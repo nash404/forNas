@@ -1,0 +1,46 @@
+<div class="container ole">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form ngNoForm action="https://formspree.io/f/mpzbbool" method="POST" name="myForm">
+                <div>
+                <label class="text-secondary" for="Email">Name</label>
+                <input type="text" class="form-control bg-secondary text-dark" required name="Name" aria-describedby="nameHelp" placeholder="Enter name">
+                <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
+            </div>
+            <br>
+                <div class="form-group">
+                <label class="text-secondary" for="message">Rewiews</label>
+                <textarea class="form-control bg-secondary text-dark" required placeholder="Enter rewiew" name="Rewiew"></textarea>
+                </div>
+                <br>
+                <button type="submit reset" class="btn btn-primary bg-dark">Submit</button>
+            </form>
+    </div>
+    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+    <div class="testimonials">
+        <h1 class="text-white yyy">Rewiews</h1>
+        <div class="border"></div>
+        <div class="inner">
+  <div *ngFor="let review of review |async"> 
+    
+   
+      <div class="testimonial">
+        <div class="name"><span class="material-icons">
+          perm_identity
+          </span>{{review.name}}</div>
+        <p>
+          {{review.text}}</p>
+      </div>
+
+    
+  </div>
+</div>
+
+        </div>
+    </div>
+  </div>
+    </div>
+<app-footer></app-footer>
+

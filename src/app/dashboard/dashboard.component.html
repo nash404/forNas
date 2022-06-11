@@ -1,0 +1,56 @@
+<div class="container ole bg-dark">
+    
+    <section>
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+            <ul class="nav nav-pills flex-column mb-auto navbar-expand-sm bg-dark navbar-dark">
+              <li>
+                <a [routerLink]="['/dashboard']" class="nav-link text-info navbar" aria-current="page">
+                    <i class="material-icons">home</i>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="['/favorite']" class="nav-link text-secondary navbar">
+                    <i class="material-icons">favorite_border</i>
+                  Favorite 
+                </a>
+              </li>
+              <li>
+                <a href="#" class=" text-secondary navbar" (click)="logoutUser()">
+                    <i class="material-icons">power_settings_new</i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+    <section>
+      <br>
+    <h1 class="deepshadow text-white text"><b>User account</b></h1>
+       <div class="d10"><h3 class="pp text-white text">Hi, {{client.name}}</h3></div>
+       <br>
+       <div><h3 class="pp text-white text">Change your details</h3></div>
+       <!--div><h3>Your email: {{client.email}}</h3><h3>Your login: {{client.login}}</h3></div-->
+       <form (submit)="updateUserName()">
+        <span class="label">Name</span>
+       <input [(ngModel)]="name" name="name" type="text" placeholder="Enter new name"  class="form-control bg-secondary text-dark" ><br>
+       <button class="btn btn-warning"  type="submit">Change</button>
+      </form><br>
+      <form (submit)="updateUserEmail()">
+        <span class="label">Email</span>
+        <input [(ngModel)]="email" name="email" type="text" placeholder="Enter new email" class="form-control bg-secondary text-dark" ><br>
+        <button class="btn btn-warning" type="submit">Change</button>
+       </form><br>
+       <form>
+         <span class="label">Password</span>
+         <input type="password" [(ngModel)]="oldPassword" name="oldPassword" placeholder="Enter old password" class="form-control bg-secondary text-dark"><br>
+         <input type="password" [(ngModel)]="newPassword" name="newPassword" (ngModelChange)="comparePass()" placeholder="Enter new password" class="form-control bg-secondary text-dark"><br>
+        <span class="label error" [class.active]="active">Passwords do not match</span>
+        <input type="password" [(ngModel)]="newPassword2" name="newPassword2" (ngModelChange)="comparePass()" placeholder="Repeat new password" class="form-control bg-secondary text-dark"><br>
+        <button ej-button id="button" (click)="updatePasswordClick()" class="btn btn-warning" type="submit">Change</button>
+        </form><br>
+</section>
+</div>
+<footer>
+<app-footer></app-footer>
+</footer>

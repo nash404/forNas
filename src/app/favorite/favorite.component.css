@@ -1,0 +1,272 @@
+.ole{
+    margin-top: 100px;
+  }
+  .text {
+    text-align:  center;
+  }
+  
+  section {
+    float: left;
+    width: 30%;
+  }
+
+  /*заголовок*/
+  h1 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    font-size: 30px;
+    /*padding: 80px 50px;*/
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+  }
+  h1.deepshadow {
+    color: #e0dfdc;
+    letter-spacing: 0.1em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+  .pp{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    text-align: center;
+    font-size: 26px;
+  }
+
+  .d10 h3 {
+    display: table;
+    width: auto;
+    margin: 0 auto;
+    padding: 15px;
+    letter-spacing: 2px;
+    border: 2px solid #cbdcea;
+    color: #394671;
+  }
+  .navbar{
+    font-family: Brush Script MT, Brush Script Std, sans-serif;
+    font-size: 24px;
+  }
+
+
+  /*для картинок*/
+  .img-row {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 576px) {
+    .img-row {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      /* количество колонок */
+      -webkit-column-gap: 1rem;
+      -moz-column-gap: 1rem;
+      column-gap: 1rem;
+      /* расстояние между колонками */
+      orphans: 1;
+      /* задаём минимальное число строк текста, которое должно остаться на предыдущей странице при печати */
+      widows: 1;
+      /* задаём минимальное число строк текста, которое должно располагаться на следующей странице при печати */
+    }
+  }
+
+  .img-row > div {
+    /* необходимо установить, иначе column-count работать не будет */
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    /* отступ под изображением */
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .img-row img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .img-description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .ii{
+    position: absolute;
+    right: 90%;
+  }
+  .ole{
+    margin-top: 100px;
+  }
+  .brd {
+    border: 4px double black; /* Параметры границы */
+    background:gray; /* Цвет фона */
+    opacity: 0.7;
+    padding: 7px; /* Поля вокруг текста */
+   }
+   h3{
+       font-weight: bold;
+       color: #000;
+       font-size: 14pt;
+   }
+   p {
+    color: #fff;
+    font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  p span {
+    display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+  p span::before,
+  p span::after {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    transform-origin: left top;
+    transition: all ease-out 0.3s;
+    content: attr(data-text);
+  }
+  p span::before {
+    z-index: 1;
+    color: rgba(0,0,0,0.2);
+    transform: scale(1.1, 1) skew(0deg, 20deg);
+  }
+  p span::after {
+    z-index: 2;
+    color: #000000;
+    text-shadow: -1px 0 1px #000000, 1px 0 1px rgba(0,0,0,0.8);
+    transform: rotateY(-40deg);
+  }
+  p span:hover::before {
+    transform: scale(1.1, 1) skew(0deg, 5deg);
+  }
+  p span:hover::after {
+    transform: rotateY(-10deg);
+  }
+  p span + span {
+    margin-left: 0.3em;
+  }
+  @media (min-width: 20em) {
+    p {
+      font-size: 2em;
+    }
+    p span::before,
+    p span::after {
+      display: block;
+    }
+  }
+  @media (min-width: 30em) {
+    p {
+      font-size: 3em;
+    }
+  }
+  @media (min-width: 40em) {
+    p {
+      font-size: 5em;
+    }
+  }
+  @media (min-width: 60em) {
+    p {
+      font-size: 8em;
+    }
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #684da3;
+  }
+   /* основа кнопки вверх */
+.scroll_top {
+    position: fixed; /* фиксированное положение */
+    bottom: -50px; /* расстояние от нижнего края */
+    right: 20px; /* расстояние от правого края */
+    width: 50px; /* ширина */
+    height: 50px; /* высота */
+    border: none; /* без рамки */
+    border-radius: 50%; /* фигура круга */
+    background: #ffffff;/* цвет фона */
+    z-index: 100; /* поверх остальных элементов */
+    outline: none; /* без внешней обводки */
+    cursor: pointer;/* курсор рука */
+    transition: 0.4s; /* плавное движение */
+}
+
+
+/* стрелочка внутри кнопки вверх */
+.scroll_top:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid rgb(0, 0, 0); /* верхняя рамка */
+      border-left: 2px solid rgb(0, 0, 0); /* левая рамка */
+    transform: rotate(45deg); /* поворот */
+    position: absolute; /* положение относительно круга */
+    top: 7px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; /* выравнивание по центру */
+}
+.scroll_top.active {
+    bottom: 20px;
+}
+
+.mm{
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.border {
+  position: relative;
+  display: inline-block;
+}
+.border img {
+  display: block;
+  width: 350px;
+}
+.border:before{
+  content: "";
+  width: 100%;
+  height: 99%;
+  border: 6px solid #FBF6F2;
+  position: absolute;
+  /*top: 20px;
+  left: 40px;*/
+  z-index: 2;
+}
+.border:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 6px solid #FBF6F2;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 2;
+}
+.border:after {
+  top: -10px;
+  left: 10px;
+  z-index: -1;
+}
+
+.reed{
+  font-family: Arial, sans-serif;
+  /*border-color: gray;*/
+  color: #c70000;
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+}
+  

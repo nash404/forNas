@@ -1,0 +1,103 @@
+.ole{
+    margin-top: 100px;
+}
+.yyy{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 28pt;
+}
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .testimonials{
+    padding: 40px 0;
+    
+    color: #434343;
+    text-align: center;
+  }
+  .inner{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  @media (min-width: 576px) {
+    .inner {
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      column-count: 3;
+      /* количество колонок */
+      -webkit-column-gap: 1rem;
+      -moz-column-gap: 1rem;
+      column-gap: 1rem;
+      /* расстояние между колонками */
+      orphans: 1;
+      /* задаём минимальное число строк текста, которое должно остаться на предыдущей странице при печати */
+      widows: 1;
+      /* задаём минимальное число строк текста, которое должно располагаться на следующей странице при печати */
+    }
+  }
+
+  .inner > div {
+    /* необходимо установить, иначе column-count работать не будет */
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    /* отступ под изображением */
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  .border{
+    width: 160px;
+    height: 5px;
+    background: #e7e46c;
+    margin: 26px auto;
+  }
+  
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  .testimonial{
+    background: rgb(178, 175, 175);
+    padding: 30px;
+  }
+  .testimonial img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-family: Snell Roundhand, cursive;
+  }
+  .stars{
+    color: #6ab04c;
+    margin-bottom: 20px;
+  }
+  
+  
+  @media screen and (max-width:960px) {
+  .col{
+    flex: 100%;
+    max-width: 80%;
+  }
+  }
+  
+  @media screen and (max-width:600px) {
+  .col{
+    flex: 100%;
+    max-width: 100%;
+  }
+  }
+
+  

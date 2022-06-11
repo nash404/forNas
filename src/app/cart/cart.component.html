@@ -1,0 +1,33 @@
+<div class="ole container">
+
+    <form ngNoForm action="https://formspree.io/f/mgeddppy" method="POST" name="myForm">
+        <div class="cart-item " *ngFor="let item of items">
+       <div>
+            <span><img src={{item.foto}} alt=""></span>
+            <span>
+        <label class="text-secondary" for="Paint">Name of the painting</label>
+        <input type="text" class="form-control bg-secondary text-white" readonly required name="Paint" aria-describedby="paintHelp" value="{{item.name}}">
+        <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
+        <h2 class="text-white" >{{ item.price | currency:'EUR' }}
+        <button class=" bg-dark deleteItemButton" (click)="deleteBasketItem(item.id)" value="{{item.id}}">
+            <span class="text-secondary material-icons md-40 deleteItemIcon">
+                delete
+            </span>
+        </button></h2>
+    </span>
+    </div>
+</div>
+    <div>
+        <label class="text-secondary" for="Email">Email</label>
+        <input type="email" class="form-control bg-secondary text-dark" required name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+        <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
+    </div>
+        <div class="form-group">
+            <label class="text-secondary" for="fullname">Full Name</label>
+            <input type="text" class="form-control bg-secondary text-dark" required name="Fullname" placeholder="Full Name">
+            </div>
+        
+        <button type="submit reset" class="btn btn-primary bg-dark">Submit</button>
+    </form>
+
+</div>

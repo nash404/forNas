@@ -1,0 +1,4 @@
+.firebase
+*-debug.log
+.runtimeconfig.json
+node_modules

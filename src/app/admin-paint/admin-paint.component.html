@@ -1,0 +1,15 @@
+<div class="ole">
+    <h1 class="text-white"><b>Admin form Paint</b></h1>
+    <form (submit)="paintAddClick()">
+        <input type="text" [(ngModel)]="name"  name="name" required placeholder="Enter name" class="text-dark bg-secondary form-control"><br>
+        <input type="text" [(ngModel)]="material"  name="material" required placeholder="Enter material" class="text-dark bg-secondary form-control"><br>
+        <input type="text" [(ngModel)]="size" name="size" required placeholder="Enter size" class="text-dark bg-secondary form-control"><br>
+        <input type="number" [(ngModel)]="price" name="price" required placeholder="Enter price" class="text-dark bg-secondary form-control"><br>
+        <input type="text" [(ngModel)]="foto"  name="foto" required placeholder="Enter foto" class="text-dark bg-secondary form-control"><br>
+        <input type="text" [(ngModel)]="style"  name="style" required placeholder="Enter style" class="text-dark bg-secondary form-control"><br>
+        <input type="text" [(ngModel)]="theme" name="theme" required placeholder="Enter theme" class="text-dark bg-secondary form-control"><br>
+        <input type="text" [(ngModel)]="status" name="status" placeholder="Enter status" class="text-dark bg-secondary form-control"><br>
+
+        <button class="btn btn-secondary" type="submit">Submit</button>
+    </form>
+    </div>

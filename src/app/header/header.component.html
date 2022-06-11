@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="header.component.css">
+<div id="head" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-black border-bottom-0 shadow-sm">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <img src="assets\img\yarlik.png" width="75" height="55" class="me-0">
+    <div><h1 class="my-0 mr-md-auto text-white font-weight-normal">ART Plakhotnyk</h1></div>
+</a>
+    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="tab h3 me-5 py-2 text-white text-decoration-none" [routerLink]="['/']">Home</a>
+        <a class="tab h3 me-5 py-2 text-white text-decoration-none" [routerLink]="['/paint']">Paintings</a>
+        <a class="tab h3 me-5 py-2 text-white text-decoration-none" [routerLink]="['/contact']">Contact me</a>
+        <a class="tab h3 me-5 py-2 text-white text-decoration-none" [routerLink]="['/reviews']">Reviews</a>
+        <a class="tab h3 me-5 py-2 text-white text-decoration-none" [routerLink]="['/cart']"><i class="material-icons">shopping_cart</i></a>
+        <a *ngIf="authService.isLoggedIn()" class="tab h3 me-5 py-2 text-white text-decoration-none" [routerLink]="['/dashboard']"><i class="material-icons">account_circle</i></a>
+        <a *ngIf="!authService.isLoggedIn()" class="yyy tab h3 me-2 py-2 text-white text-decoration-none btn btn-outline-light" [routerLink]="['/auth']">Login</a>
+        <a *ngIf="!authService.isLoggedIn()" class="yyy tab h3 me-5 py-2 text-white text-decoration-none btn btn-warning" [routerLink]="['/reg']">Sign-up</a>          
+    </nav>
+</div>
+    
+      
+

@@ -1,0 +1,372 @@
+.brd {
+    border: 4px double black; /* Параметры границы */
+    background:gray; /* Цвет фона */
+    opacity: 0.7;
+    padding: 7px; /* Поля вокруг текста */
+   }
+   h3{
+       font-weight: bold;
+       color: #000;
+       font-size: 14pt;
+   }
+   p {
+    color: #fff;
+    font-family: Avenir Next, Helvetica Neue, Helvetica, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  p span {
+    display: inline-block;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 500;
+    -webkit-font-smoothing: antialiased;
+  }
+  p span::before,
+  p span::after {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    transform-origin: left top;
+    transition: all ease-out 0.3s;
+    content: attr(data-text);
+  }
+  p span::before {
+    z-index: 1;
+    color: rgba(0,0,0,0.2);
+    transform: scale(1.1, 1) skew(0deg, 20deg);
+  }
+  p span::after {
+    z-index: 2;
+    color: #000000;
+    text-shadow: -1px 0 1px #000000, 1px 0 1px rgba(0,0,0,0.8);
+    transform: rotateY(-40deg);
+  }
+  p span:hover::before {
+    transform: scale(1.1, 1) skew(0deg, 5deg);
+  }
+  p span:hover::after {
+    transform: rotateY(-10deg);
+  }
+  p span + span {
+    margin-left: 0.3em;
+  }
+  @media (min-width: 20em) {
+    p {
+      font-size: 2em;
+    }
+    p span::before,
+    p span::after {
+      display: block;
+    }
+  }
+  @media (min-width: 30em) {
+    p {
+      font-size: 3em;
+    }
+  }
+  @media (min-width: 40em) {
+    p {
+      font-size: 5em;
+    }
+  }
+  @media (min-width: 60em) {
+    p {
+      font-size: 8em;
+    }
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #684da3;
+  }
+   /* основа кнопки вверх */
+.scroll_top {
+    position: fixed; /* фиксированное положение */
+    bottom: -50px; /* расстояние от нижнего края */
+    right: 20px; /* расстояние от правого края */
+    width: 50px; /* ширина */
+    height: 50px; /* высота */
+    border: none; /* без рамки */
+    border-radius: 50%; /* фигура круга */
+    background: #ffffff;/* цвет фона */
+    z-index: 100; /* поверх остальных элементов */
+    outline: none; /* без внешней обводки */
+    cursor: pointer;/* курсор рука */
+    transition: 0.4s; /* плавное движение */
+}
+
+
+/* стрелочка внутри кнопки вверх */
+.scroll_top:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid rgb(0, 0, 0); /* верхняя рамка */
+      border-left: 2px solid rgb(0, 0, 0); /* левая рамка */
+    transform: rotate(45deg); /* поворот */
+    position: absolute; /* положение относительно круга */
+    top: 7px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; /* выравнивание по центру */
+}
+.scroll_top.active {
+    bottom: 20px;
+}
+img{
+  width: 25%;
+    height: 35%;
+}
+.mm{
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.border {
+  position: relative;
+  display: inline-block;
+}
+.border img {
+  display: block;
+  width: 350px;
+}
+.border:before{
+  content: "";
+  width: 100%;
+  height: 99%;
+  border: 6px solid #FBF6F2;
+  position: absolute;
+  /*top: 20px;
+  left: 40px;*/
+  z-index: 2;
+}
+.border:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 6px solid #FBF6F2;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 2;
+}
+.border:after {
+  top: -10px;
+  left: 10px;
+  z-index: -1;
+}
+section {
+  float: left;
+  width: 40%;
+}
+footer{
+  clear: both;
+  
+}
+.textt{
+  font-family:'Сomic Sans MS';
+  font-size: 140%;
+  color: rgb(197, 192, 192);
+  font-style: italic;
+
+}
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
+ .modall_t{
+text-align: left;
+align-items:flex-end;
+font-family: Brush Script MT, Brush Script Std, cursive;
+ }
+ .iii{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 200px;
+  
+  }
+  .titl{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+
+  }
+.d10 h3 {
+    display: table;
+    width: auto;
+    margin: 0 auto;
+    padding: 15px;
+    letter-spacing: 2px;
+    border: 2px solid #cbdcea;
+    color: #394671;
+  }
+  .text-shadow-2 {
+    font-size: 26pt;
+  }
+  .text-shadow-1 {
+    font-size: 20pt;
+  }
+  .text-shadow-0 {
+    font-size: 15pt;
+  }
+  i{
+    background: transparent;
+    border: none !important;
+    font-size:0;
+  }
+  .div-shadow {
+    
+    line-height: 50px;
+    
+    padding: 0 0px;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    
+    box-shadow:0 0 20px #555;
+}
+
+/*новости*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  background-color: #f0f0f0;
+}
+body {
+  color: #999999;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+.btn--block {
+  display: block;
+  width: 100%;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+.card__image--flowers {
+  background-image: url("../../assets/img/Office_approx.webp");
+}
+.card__image--river {
+  background-image: url("../../assets/img/Ukaine_news.webp");
+}
+.card__image--record {
+  background-image: url(https://www.artnews.com/wp-content/uploads/2022/05/Painter-at-work_MANN-9018.jpg);
+}
+.card__image--fence {
+  background-image: url("../../assets/img/Ghenie.webp");
+}
+.card__title {
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+}
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.y{
+  font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 28pt;
+}
+
+.d10 h1 {
+  display: table;
+  width: auto;
+  margin: 0 auto;
+  padding: 15px;
+  letter-spacing: 2px;
+  border: 2px solid #cbdcea;
+  color: #394671;
+}
